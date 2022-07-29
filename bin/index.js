@@ -142,7 +142,15 @@ const configFile = (project) =>{
         (err) => {
             if(err) throw err;
             console.log("tsconfig.json created");
-            console.log("Project Initiated");
+            console.log("Project Created");
+            console.log("Next Steps:");
+            console.log("cd ./"+project);
+            console.log("1. Run 'npm install'");
+            console.log("2. Run 'npm run build'");
+            console.log("3. Run 'npm run dev'");
+            console.log("Production : ")
+            console.log("4. Run 'npm run build'");
+            console.log("5. Run 'npm start'");
         }
     )
 }

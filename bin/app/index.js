@@ -10,7 +10,7 @@ import morganMiddleware from "./middlewares/morgan";
 dotenv.config();
 
 const app: Express = express();
-const port: number = Number(process.env.PORT) || 6666;
+const port: number = Number(process.env.PORT) || 4646;
 
 app.use(morganMiddleware);
 
