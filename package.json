@@ -1,14 +1,10 @@
 {
     "name": "ets-gen",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Simple Script to Generate Express.js Typescript Server Side Application",
     "main": "./bin/index.js",
     "bin": {
         "ets-gen": "./bin/index.js"
-    },
-
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
         "express",
