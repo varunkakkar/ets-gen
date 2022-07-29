@@ -2,7 +2,7 @@ module.exports = (project,description,author,license) => ({
     "name": project,
     "version": "0.0.1",
     "description": description,
-    "main": "./dist/index.js",
+    "main": "dist/index.js",
     "scripts": {
         "start": "node dist/index.js",
         "build": "npx tsc",

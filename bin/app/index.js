@@ -10,7 +10,7 @@ import morganMiddleware from "./middlewares/morgan";
 dotenv.config();
 
 const app: Express = express();
-const port: number = Number(process.env.PORT);
+const port: number = Number(process.env.PORT) || 6666;
 
 app.use(morganMiddleware);
 
@@ -30,6 +30,6 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
 app.use("/api", ApiRouter);
 
 app.listen(port, () => {
-  Logger.debug('⚡️[server]: Server is running at https://localhost:%d', port);
+  Logger.debug('⚡️[server]: Server is running at https://localhost:' + port);
 });
 `

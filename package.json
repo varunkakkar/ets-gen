@@ -1,10 +1,10 @@
 {
-    "name": "swanky",
+    "name": "ets-gen",
     "version": "0.0.1",
     "description": "Simple Script to Generate Express.js Typescript Server Side Application",
     "main": "./bin/index.js",
-    "bin":{
-        "swanky": "./bin/index.js"
+    "bin": {
+        "ets-gen": "./bin/index.js"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,8 @@
         "generator"
     ],
     "author": "varunkakkar <vnkakkar7@gmail.com>",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "express-typescript-generator": "^1.0.7"
+    }
 }

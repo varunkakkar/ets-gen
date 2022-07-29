@@ -138,7 +138,7 @@ const gitignoreFile = (project) =>{
 //========================================================================================
 const configFile = (project) =>{
     fs.writeFile(`./${project}/tsconfig.json`,
-        config(project),
+    JSON.stringify(config(project),null,2),
         (err) => {
             if(err) throw err;
             console.log("tsconfig.json created");
