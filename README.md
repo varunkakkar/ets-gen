@@ -6,9 +6,9 @@
 ##### Installation Instruction
 1. Install the Package Globally
 ```bash
-npm install -g swanky
+npm install -g ets-gen
 ```
 2. Then you can use the generator by running:
 ```bash
-swanky
+ets-gen
 ```
