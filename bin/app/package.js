@@ -2,7 +2,7 @@ module.exports = (project,description,author,license) => ({
     "name": project,
     "version": "0.0.1",
     "description": description,
-    "main":  "index.js",
+    "main": "./dist/index.js",
     "scripts": {
         "start": "node dist/index.js",
         "build": "npx tsc",
@@ -14,20 +14,16 @@ module.exports = (project,description,author,license) => ({
     "devDependencies": {
         "@types/node": "*",
         "@types/express": "*",
+        "@types/morgan": "*",
         "concurrently": "*",
         "nodemon": "*",
         "typescript": "*",
+        "ts-node": "*",
     },
     "dependencies": {
         "dotenv": "*",
         "express": "*",
         "morgan": "*",
         "winston": "*",
-    },
-    "files": [
-        "index.js",
-        "routes/api.js",
-        "tools/logger.js",
-        "middlewares/morgan.js",
-    ]
+    }
 })

@@ -8,7 +8,8 @@ const interface = readLine.createInterface({
 
 const package = require('./app/package.js')
 const gitignore = require('./app/gitignore.js')
-const index = require('./app/index.js')
+const indexFile = require('./app/index.js')
+const config = require('./app/tsconfig.js')
 const apiRouter = require('./app/routes/api.js')
 const logger = require('./app/tools/logger.js')
 const morgan = require('./app/middlewares/morgan.js')
@@ -18,7 +19,7 @@ const morgan = require('./app/middlewares/morgan.js')
 //========================================================================================
 const init = () =>{
     interface.question(
-        "What will be your project name?",
+        "What will be your project name? => ",
         (project) => {
             if(project.length === 0){
                 console.log("Project name cannot be empty");
@@ -29,13 +30,13 @@ const init = () =>{
                 return interface.close();
             }
             interface.question(
-                "What will be your project description?",
+                "Write a short & crisp description for your project(leave blank for empty) ? => ",
                 (description) => {
                     interface.question(
-                        "What is your name?",
+                        "What is your name? => ",
                         (author) => {
                             interface.question(
-                                "What is your license?",
+                                "Choose your license type(leave blank for empty) ? => ",
                                 (license) => {
                                     interface.close();
                                     fs.mkdirSync(`./${project}`);
@@ -72,7 +73,7 @@ const json = (project,description,author,license) =>{
 //========================================================================================
 const index = (project) =>{
     fs.writeFile(`./${project}/index.ts`,
-        index(project),
+        indexFile(project),
         (err) => {
             if(err) throw err;
             console.log("index.ts created");
@@ -128,8 +129,20 @@ const gitignoreFile = (project) =>{
         (err) => {
             if(err) throw err;
             console.log("gitignore created");
-            console.log("Project created");
-            interface.close();
+            configFile(project);
+        }
+    )
+}
+//========================================================================================
+//========================================================================================
+//========================================================================================
+const configFile = (project) =>{
+    fs.writeFile(`./${project}/tsconfig.json`,
+        config(project),
+        (err) => {
+            if(err) throw err;
+            console.log("tsconfig.json created");
+            console.log("Project Initiated");
         }
     )
 }
