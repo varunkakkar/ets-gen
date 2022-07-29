@@ -8,7 +8,7 @@ const interface = readLine.createInterface({
 
 const package = require('./app/package.js')
 const gitignore = require('./app/gitignore.js')
-const indexFile = require('./app/index.js')
+const index = require('./app/index.js')
 const config = require('./app/tsconfig.js')
 const apiRouter = require('./app/routes/api.js')
 const logger = require('./app/tools/logger.js')
@@ -71,9 +71,9 @@ const json = (project,description,author,license) =>{
 //========================================================================================
 //========================================================================================
 //========================================================================================
-const index = (project) =>{
+const indexFile = (project) =>{
     fs.writeFile(`./${project}/index.ts`,
-        indexFile(project),
+        index(project),
         (err) => {
             if(err) throw err;
             console.log("index.ts created");
