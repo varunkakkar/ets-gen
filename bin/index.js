@@ -64,7 +64,7 @@ const json = (project,description,author,license) =>{
             fs.mkdirSync(`./${project}/routes`);
             fs.mkdirSync(`./${project}/tools`);
             fs.mkdirSync(`./${project}/middlewares`);
-            index(project);
+            indexFile(project);
         }
     )
 }
