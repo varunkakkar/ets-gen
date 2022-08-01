@@ -1,6 +1,6 @@
 {
     "name": "ets-gen",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Simple Script to Generate Express.js Typescript Server Side Application",
     "main": "./bin/index.js",
     "bin": {
