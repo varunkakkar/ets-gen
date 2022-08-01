@@ -18,8 +18,11 @@ const morgan = require('./app/middlewares/morgan.js')
 //========================================================================================
 //========================================================================================
 const init = () =>{
+    console.log("--------------------------------------------------------------");
+    console.log("|  Welcome to ets-gen v0.0.6 - TypeScript Project Generator  |");
+    console.log("--------------------------------------------------------------");
     interface.question(
-        "What will be your project name? => ",
+        "🌟 What will be your project name? => ",
         (project) => {
             if(project.length === 0){
                 console.log("Project name cannot be empty");
@@ -30,13 +33,13 @@ const init = () =>{
                 return interface.close();
             }
             interface.question(
-                "Write a short & crisp description for your project(leave blank for empty) ? => ",
+                "🌟 Write a short & crisp description for your project(leave blank for empty) ? => ",
                 (description) => {
                     interface.question(
-                        "What is your name? => ",
+                        "🌟 What is your name? => ",
                         (author) => {
                             interface.question(
-                                "Choose your license type(leave blank for empty) ? => ",
+                                "🌟 Choose your license type(leave blank for empty) ? => ",
                                 (license) => {
                                     interface.close();
                                     fs.mkdirSync(`./${project}`);

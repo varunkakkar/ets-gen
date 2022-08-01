@@ -9,7 +9,12 @@
     "keywords": [
         "express",
         "typescript",
-        "generator"
+        "generator",
+        "api",
+        "server",
+        "express-ts",
+        "ets-gen",
+        "cli"
     ],
     "author": "varunkakkar <vnkakkar7@gmail.com>",
     "license": "ISC",
